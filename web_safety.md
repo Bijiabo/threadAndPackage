@@ -178,7 +178,7 @@ Node.js作为一门新型的开发语言，很多开发者都会用它来快速�
 
     var commentObj = $('#comment');
     $.get('/getcomment', {r:Math.random(),page:1,article_id:1234},function(data){
-        //通过Ajax获取评论内容，然后将品论的内容一起加载到页面中
+        //通过Ajax获取评论内容，然后将评论的内容一起加载到页面中
         if(data.state !== 200)  return commentObj.html('留言加载失败。')
         commentObj.html(data.content);
     },'json');
